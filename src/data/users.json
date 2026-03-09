@@ -1,0 +1,14 @@
+[
+  {
+    "id": "STPM-100-0001",
+    "fullName": "Admin User",
+    "email": "admin@smarttransport.com",
+    "mobile": "+919000000001",
+    "userType": "employee",
+    "password": "admin123",
+    "role": "admin",
+    "status": "active",
+    "createdAt": "2025-01-01",
+    "photoUrl": null
+  }
+]

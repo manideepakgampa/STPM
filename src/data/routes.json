@@ -1,0 +1,155 @@
+[
+  {
+    "id": "RT-001",
+    "name": "Central Line Express",
+    "from": "Rajiv Chowk",
+    "to": "Huda City Centre",
+    "type": "metro",
+    "distance": "28.5 km",
+    "estimatedTime": "45 min",
+    "trafficLevel": "low",
+    "fare": 40,
+    "stops": [
+      { "name": "Rajiv Chowk", "distanceFromStart": 0, "timeFromStart": 0 },
+      { "name": "Patel Chowk", "distanceFromStart": 1.2, "timeFromStart": 2 },
+      { "name": "Central Secretariat", "distanceFromStart": 2.5, "timeFromStart": 5 },
+      { "name": "Udyog Bhawan", "distanceFromStart": 3.8, "timeFromStart": 7 },
+      { "name": "AIIMS", "distanceFromStart": 5.5, "timeFromStart": 10 },
+      { "name": "Hauz Khas", "distanceFromStart": 12, "timeFromStart": 20 },
+      { "name": "IFFCO Chowk", "distanceFromStart": 22, "timeFromStart": 36 },
+      { "name": "Huda City Centre", "distanceFromStart": 28.5, "timeFromStart": 45 }
+    ]
+  },
+  {
+    "id": "RT-002",
+    "name": "Airport Express",
+    "from": "New Delhi",
+    "to": "Dwarka Sec 21",
+    "type": "metro",
+    "distance": "22.7 km",
+    "estimatedTime": "20 min",
+    "trafficLevel": "low",
+    "fare": 60,
+    "stops": [
+      { "name": "New Delhi", "distanceFromStart": 0, "timeFromStart": 0 },
+      { "name": "Shivaji Stadium", "distanceFromStart": 3, "timeFromStart": 3 },
+      { "name": "Dhaula Kuan", "distanceFromStart": 8, "timeFromStart": 7 },
+      { "name": "IGI Airport T3", "distanceFromStart": 16, "timeFromStart": 14 },
+      { "name": "Dwarka Sec 21", "distanceFromStart": 22.7, "timeFromStart": 20 }
+    ]
+  },
+  {
+    "id": "RT-003",
+    "name": "Ring Road Connector",
+    "from": "ISBT Kashmere Gate",
+    "to": "Nehru Place",
+    "type": "bus",
+    "distance": "15.2 km",
+    "estimatedTime": "55 min",
+    "trafficLevel": "high",
+    "fare": 25,
+    "stops": [
+      { "name": "ISBT Kashmere Gate", "distanceFromStart": 0, "timeFromStart": 0 },
+      { "name": "Red Fort", "distanceFromStart": 2.5, "timeFromStart": 10 },
+      { "name": "ITO", "distanceFromStart": 5, "timeFromStart": 20 },
+      { "name": "Pragati Maidan", "distanceFromStart": 7, "timeFromStart": 28 },
+      { "name": "Ashram", "distanceFromStart": 11, "timeFromStart": 42 },
+      { "name": "Nehru Place", "distanceFromStart": 15.2, "timeFromStart": 55 }
+    ]
+  },
+  {
+    "id": "RT-004",
+    "name": "Outer Ring Express",
+    "from": "Mundka",
+    "to": "Botanical Garden",
+    "type": "metro",
+    "distance": "35 km",
+    "estimatedTime": "55 min",
+    "trafficLevel": "moderate",
+    "fare": 50,
+    "stops": [
+      { "name": "Mundka", "distanceFromStart": 0, "timeFromStart": 0 },
+      { "name": "Rajouri Garden", "distanceFromStart": 8, "timeFromStart": 12 },
+      { "name": "Moti Nagar", "distanceFromStart": 10, "timeFromStart": 15 },
+      { "name": "Rajiv Chowk", "distanceFromStart": 18, "timeFromStart": 28 },
+      { "name": "Mandi House", "distanceFromStart": 20, "timeFromStart": 31 },
+      { "name": "Yamuna Bank", "distanceFromStart": 24, "timeFromStart": 37 },
+      { "name": "Noida Sec 15", "distanceFromStart": 30, "timeFromStart": 47 },
+      { "name": "Botanical Garden", "distanceFromStart": 35, "timeFromStart": 55 }
+    ]
+  },
+  {
+    "id": "RT-005",
+    "name": "South Delhi Shuttle",
+    "from": "Saket",
+    "to": "Connaught Place",
+    "type": "bus",
+    "distance": "12 km",
+    "estimatedTime": "40 min",
+    "trafficLevel": "moderate",
+    "fare": 20,
+    "stops": [
+      { "name": "Saket", "distanceFromStart": 0, "timeFromStart": 0 },
+      { "name": "Hauz Khas", "distanceFromStart": 2.5, "timeFromStart": 8 },
+      { "name": "AIIMS", "distanceFromStart": 5, "timeFromStart": 16 },
+      { "name": "Moti Bagh", "distanceFromStart": 7, "timeFromStart": 22 },
+      { "name": "India Gate", "distanceFromStart": 10, "timeFromStart": 32 },
+      { "name": "Connaught Place", "distanceFromStart": 12, "timeFromStart": 40 }
+    ]
+  },
+  {
+    "id": "RT-006",
+    "name": "Dwarka City Bus",
+    "from": "Dwarka Sec 1",
+    "to": "Janakpuri",
+    "type": "bus",
+    "distance": "8 km",
+    "estimatedTime": "30 min",
+    "trafficLevel": "low",
+    "fare": 15,
+    "stops": [
+      { "name": "Dwarka Sec 1", "distanceFromStart": 0, "timeFromStart": 0 },
+      { "name": "Dwarka Mor", "distanceFromStart": 3, "timeFromStart": 10 },
+      { "name": "Uttam Nagar", "distanceFromStart": 5.5, "timeFromStart": 20 },
+      { "name": "Janakpuri", "distanceFromStart": 8, "timeFromStart": 30 }
+    ]
+  },
+  {
+    "id": "RT-007",
+    "name": "Violet Line",
+    "from": "Kashmere Gate",
+    "to": "Raja Nahar Singh (Ballabhgarh)",
+    "type": "metro",
+    "distance": "46 km",
+    "estimatedTime": "70 min",
+    "trafficLevel": "moderate",
+    "fare": 55,
+    "stops": [
+      { "name": "Kashmere Gate", "distanceFromStart": 0, "timeFromStart": 0 },
+      { "name": "Mandi House", "distanceFromStart": 5, "timeFromStart": 8 },
+      { "name": "Central Secretariat", "distanceFromStart": 7, "timeFromStart": 12 },
+      { "name": "Nehru Place", "distanceFromStart": 14, "timeFromStart": 22 },
+      { "name": "Badarpur Border", "distanceFromStart": 28, "timeFromStart": 42 },
+      { "name": "Faridabad", "distanceFromStart": 38, "timeFromStart": 58 },
+      { "name": "Raja Nahar Singh (Ballabhgarh)", "distanceFromStart": 46, "timeFromStart": 70 }
+    ]
+  },
+  {
+    "id": "RT-008",
+    "name": "Noida Express Bus",
+    "from": "Anand Vihar ISBT",
+    "to": "Noida Sec 62",
+    "type": "bus",
+    "distance": "18 km",
+    "estimatedTime": "50 min",
+    "trafficLevel": "high",
+    "fare": 30,
+    "stops": [
+      { "name": "Anand Vihar ISBT", "distanceFromStart": 0, "timeFromStart": 0 },
+      { "name": "Kaushambi", "distanceFromStart": 4, "timeFromStart": 12 },
+      { "name": "Noida Sec 15", "distanceFromStart": 9, "timeFromStart": 25 },
+      { "name": "Noida Sec 37", "distanceFromStart": 13, "timeFromStart": 35 },
+      { "name": "Noida Sec 62", "distanceFromStart": 18, "timeFromStart": 50 }
+    ]
+  }
+]

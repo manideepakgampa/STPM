@@ -1,0 +1,86 @@
+{
+  "student": [
+    {
+      "id": "PLAN-S-01",
+      "name": "Daily Pass",
+      "duration": "1 Day",
+      "price": 30,
+      "routeLimit": 2,
+      "benefits": ["Any 2 routes", "Bus only"]
+    },
+    {
+      "id": "PLAN-S-02",
+      "name": "Monthly Route Pass",
+      "duration": "30 Days",
+      "price": 500,
+      "routeLimit": 3,
+      "benefits": ["Up to 3 routes", "Bus + Metro", "5% cashback"]
+    },
+    {
+      "id": "PLAN-S-03",
+      "name": "3 Months Pass",
+      "duration": "90 Days",
+      "price": 1350,
+      "routeLimit": 5,
+      "benefits": ["Up to 5 routes", "Bus + Metro", "10% cashback"]
+    },
+    {
+      "id": "PLAN-S-04",
+      "name": "6 Months Pass",
+      "duration": "180 Days",
+      "price": 2500,
+      "routeLimit": 8,
+      "benefits": ["Up to 8 routes", "All transport", "15% cashback"]
+    },
+    {
+      "id": "PLAN-S-05",
+      "name": "1 Year Pass",
+      "duration": "365 Days",
+      "price": 4500,
+      "routeLimit": -1,
+      "benefits": ["Unlimited routes", "All transport", "20% cashback", "Priority boarding"]
+    }
+  ],
+  "employee": [
+    {
+      "id": "PLAN-E-01",
+      "name": "Daily Corporate Pass",
+      "duration": "1 Day",
+      "price": 50,
+      "routeLimit": 3,
+      "benefits": ["Any 3 routes", "Bus + Metro"]
+    },
+    {
+      "id": "PLAN-E-02",
+      "name": "Monthly Unlimited Pass",
+      "duration": "30 Days",
+      "price": 1200,
+      "routeLimit": -1,
+      "benefits": ["Unlimited routes", "All transport", "Corporate discount"]
+    },
+    {
+      "id": "PLAN-E-03",
+      "name": "3 Months Corporate Plan",
+      "duration": "90 Days",
+      "price": 3200,
+      "routeLimit": -1,
+      "benefits": ["Unlimited routes", "All transport", "10% cashback"]
+    },
+    {
+      "id": "PLAN-E-04",
+      "name": "6 Months Corporate Plan",
+      "duration": "180 Days",
+      "price": 5800,
+      "routeLimit": -1,
+      "benefits": ["Unlimited routes", "Priority boarding", "15% cashback"]
+    },
+    {
+      "id": "PLAN-E-05",
+      "name": "1 Year Enterprise Plan",
+      "duration": "365 Days",
+      "price": 10000,
+      "routeLimit": -1,
+      "benefits": ["Unlimited everything", "VIP boarding", "25% cashback", "Dedicated support"]
+    }
+  ]
+}
