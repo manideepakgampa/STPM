@@ -2,7 +2,8 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
-import { CreditCard, Mail, Phone, Calendar, User, Wallet, Clock3 } from "lucide-react";
+import { CreditCard, Mail, Phone, Calendar, User, Wallet, Clock3, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import type { AppUser, TransportPass } from "@/lib/app-state";
 
 interface UserDetailSheetProps {
@@ -10,9 +11,11 @@ interface UserDetailSheetProps {
   onOpenChange: (open: boolean) => void;
   user: (AppUser & { walletBalance?: number; activePasses?: number }) | null;
   passes: TransportPass[];
+  onDeleteUser?: (userId: string) => void;
+  deletingUser?: boolean;
 }
 
-const UserDetailSheet = ({ open, onOpenChange, user, passes }: UserDetailSheetProps) => {
+const UserDetailSheet = ({ open, onOpenChange, user, passes, onDeleteUser, deletingUser = false }: UserDetailSheetProps) => {
   if (!user) return null;
 
   const userPasses = passes.filter((p) => p.userId === user.id);
@@ -68,6 +71,20 @@ const UserDetailSheet = ({ open, onOpenChange, user, passes }: UserDetailSheetPr
               <span>Wallet Balance: ₹{user.walletBalance ?? 0}</span>
             </div>
           </div>
+        </div>
+
+        <Separator className="mb-4" />
+
+        <div className="mb-6">
+          <Button
+            variant="destructive"
+            className="w-full"
+            disabled={deletingUser}
+            onClick={() => onDeleteUser?.(user.id)}
+          >
+            <Trash2 className="w-4 h-4 mr-2" />
+            {deletingUser ? "Deleting user..." : "Delete User Account"}
+          </Button>
         </div>
 
         <Separator className="mb-4" />
