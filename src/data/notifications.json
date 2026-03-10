@@ -1,5 +1,68 @@
 [
   {
+    "id": "NOT-1773131313924",
+    "type": "targeted",
+    "userId": "STPM-479-7888",
+    "title": "Welcome to Smart Transport",
+    "message": "Your account is ready. You can now apply for transport passes.",
+    "date": "2026-03-10",
+    "read": true
+  },
+  {
+    "id": "NOT-1773131204260",
+    "type": "targeted",
+    "userId": "STPM-371-1481",
+    "title": "Welcome to Smart Transport",
+    "message": "Your account is ready. You can now apply for transport passes.",
+    "date": "2026-03-10",
+    "read": false
+  },
+  {
+    "id": "NOT-1773131069515",
+    "type": "targeted",
+    "userId": "STPM-583-7355",
+    "title": "Welcome to Smart Transport",
+    "message": "Your account is ready. You can now apply for transport passes.",
+    "date": "2026-03-10",
+    "read": false
+  },
+  {
+    "id": "NOT-1773130968817",
+    "type": "targeted",
+    "userId": "STPM-533-6433",
+    "title": "Welcome to Smart Transport",
+    "message": "Your account is ready. You can now apply for transport passes.",
+    "date": "2026-03-10",
+    "read": false
+  },
+  {
+    "id": "NOT-1773130912145",
+    "type": "targeted",
+    "userId": "STPM-360-9504",
+    "title": "Welcome to Smart Transport",
+    "message": "Your account is ready. You can now apply for transport passes.",
+    "date": "2026-03-10",
+    "read": false
+  },
+  {
+    "id": "NOT-1773130834460",
+    "type": "targeted",
+    "userId": "STPM-757-7026",
+    "title": "Welcome to Smart Transport",
+    "message": "Your account is ready. You can now apply for transport passes.",
+    "date": "2026-03-10",
+    "read": false
+  },
+  {
+    "id": "NOT-1773130404942",
+    "type": "targeted",
+    "userId": "STPM-735-4462",
+    "title": "Welcome to Smart Transport",
+    "message": "Your account is ready. You can now apply for transport passes.",
+    "date": "2026-03-10",
+    "read": false
+  },
+  {
     "id": "NOT-mmk8nz5o-924",
     "type": "targeted",
     "userId": "STPM-785-6622",
