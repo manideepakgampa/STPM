@@ -5,6 +5,7 @@ import { usePageLoader } from "@/hooks/use-page-loader";
 import TransportLoader from "@/components/TransportLoader";
 import Navbar from "@/components/Navbar";
 import { updateAppState, exportAppState, importAppState } from "@/lib/app-state";
+import { deleteUserAccount } from "@/lib/api";
 import { toast } from "sonner";
 import { Bell, Database, Download, Eye, EyeOff, Lock, Moon, Shield, Upload, User } from "lucide-react";
 
@@ -82,14 +83,13 @@ const UserSettings = () => {
     }
   };
 
-  const handleDeleteAccount = () => {
-    updateAppState((draft) => {
-      draft.users = draft.users.filter((u) => u.id !== user.id);
-      delete draft.wallets[user.id];
-    });
+  const handleDeleteAccount = async () => {
+    const confirmed = window.confirm("Delete your account and all associated data (passes, applications, trips, wallet, notifications)?");
+    if (!confirmed) return;
+    await deleteUserAccount(user.id);
     logout();
     navigate("/login");
-    toast.success("Account deleted");
+    toast.success("Account and related data deleted");
   };
 
   return (

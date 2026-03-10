@@ -15,6 +15,7 @@ import {
   deleteService,
   deleteVehicle,
   deleteOperator,
+  deleteUserAccount,
   fetchAdminStats,
   fetchAdminUsers,
   fetchAllPasses,
@@ -99,6 +100,7 @@ const AdminDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [busyApplicationId, setBusyApplicationId] = useState<string | null>(null);
   const [busyRenewalId, setBusyRenewalId] = useState<string | null>(null);
+  const [busyDeleteUserId, setBusyDeleteUserId] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
   // Operator creation form
@@ -222,6 +224,13 @@ const AdminDashboard = () => {
   };
 
   const handleResetData = () => { if (window.confirm("This will reset ALL data to empty state. Are you sure?")) { resetAppState(); window.location.reload(); } };
+  const handleDeleteUser = async (userId: string) => {
+    if (!window.confirm("Delete this user and all associated data (wallet, passes, applications, trips, notifications)?")) return;
+    setBusyDeleteUserId(userId);
+    await deleteUserAccount(userId);
+    setBusyDeleteUserId(null);
+    setSelectedUserId(null);
+  };
   const handleLogout = () => { logout(); navigate("/login"); };
 
   const statCards = [
@@ -695,6 +704,8 @@ const AdminDashboard = () => {
         onOpenChange={(open) => { if (!open) setSelectedUserId(null); }}
         user={selectedUserData}
         passes={passes}
+        onDeleteUser={handleDeleteUser}
+        deletingUser={!!selectedUserData && busyDeleteUserId === selectedUserData.id}
       />
       <OperatorDetailSheet
         open={!!selectedOperatorId}

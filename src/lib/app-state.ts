@@ -185,6 +185,7 @@ export interface AppState {
 
 const STORAGE_KEY = "smart_transport_realtime_state_v4";
 const EVENT_NAME = "smart_transport_realtime_state_changed";
+let runtimeState: AppState | null = null;
 
 const deepClone = <T,>(value: T): T => JSON.parse(JSON.stringify(value));
 
@@ -203,14 +204,20 @@ const buildInitialState = (): AppState => ({
 });
 
 const getStoredState = (): AppState => {
+  if (runtimeState) {
+    return runtimeState;
+  }
+
   if (typeof window === "undefined") {
-    return buildInitialState();
+    runtimeState = buildInitialState();
+    return runtimeState;
   }
 
   const raw = window.localStorage.getItem(STORAGE_KEY);
   if (!raw) {
     const seeded = buildInitialState();
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(seeded));
+    runtimeState = seeded;
     return seeded;
   }
 
@@ -219,11 +226,43 @@ const getStoredState = (): AppState => {
     // Ensure new fields exist for older stored states
     if (!parsed.vehicles) parsed.vehicles = [];
     if (!parsed.trips) parsed.trips = [];
+    runtimeState = parsed;
     return parsed;
   } catch {
     const seeded = buildInitialState();
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(seeded));
+    runtimeState = seeded;
     return seeded;
+  }
+};
+
+const syncStateToFiles = async (state: AppState) => {
+  if (typeof window === "undefined") return;
+  try {
+    await fetch("/api/state", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(state),
+    });
+  } catch {
+    // Keep app functional even if file persistence API is unavailable.
+  }
+};
+
+export const initializeAppState = async () => {
+  const fallback = getStoredState();
+  if (typeof window === "undefined") return deepClone(fallback);
+
+  try {
+    const response = await fetch("/api/state", { method: "GET" });
+    if (!response.ok) return deepClone(fallback);
+    const persisted = (await response.json()) as AppState;
+    runtimeState = persisted;
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(persisted));
+    emitStateChange();
+    return deepClone(persisted);
+  } catch {
+    return deepClone(fallback);
   }
 };
 
@@ -241,7 +280,9 @@ export const updateAppState = (updater: (draft: AppState) => AppState | void) =>
   const next = updater(draft) ?? draft;
 
   if (typeof window !== "undefined") {
+    runtimeState = next;
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    void syncStateToFiles(next);
     emitStateChange();
   }
 
@@ -251,7 +292,9 @@ export const updateAppState = (updater: (draft: AppState) => AppState | void) =>
 export const resetAppState = () => {
   const seeded = buildInitialState();
   if (typeof window !== "undefined") {
+    runtimeState = seeded;
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(seeded));
+    void syncStateToFiles(seeded);
     emitStateChange();
   }
   return deepClone(seeded);
@@ -296,7 +339,9 @@ export const importAppState = (jsonString: string): { success: boolean; error?: 
     };
 
     if (typeof window !== "undefined") {
+      runtimeState = merged;
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
+      void syncStateToFiles(merged);
       emitStateChange();
     }
 
