@@ -918,5 +918,30 @@ export async function deleteOperator(operatorId: string) {
   return { success: true };
 }
 
+/* ─── ADMIN/USER: Delete User (cascades all related records) ─── */
+export async function deleteUserAccount(userId: string) {
+  await delay(220);
+  updateAppState((draft) => {
+    const target = draft.users.find((u) => u.id === userId);
+    if (!target) return;
+
+    draft.users = draft.users.filter((u) => u.id !== userId);
+    delete draft.wallets[userId];
+    draft.passes = draft.passes.filter((p) => p.userId !== userId);
+    draft.applications = draft.applications.filter((a) => a.userId !== userId);
+    draft.trips = draft.trips.filter((t) => t.userId !== userId);
+    draft.notifications = draft.notifications.filter((n) => n.userId !== userId);
+
+    if (target.role === "operator") {
+      delete draft.operators[userId];
+      draft.trips = draft.trips.filter((t) => t.operatorId !== userId);
+      draft.passes.forEach((pass) => {
+        pass.history = pass.history.filter((h) => h.operatorId !== userId);
+      });
+    }
+  });
+  return { success: true };
+}
+
 /* ─── RESET ─── */
 export { resetAppState } from "@/lib/app-state";
