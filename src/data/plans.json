@@ -6,7 +6,10 @@
       "duration": "1 Day",
       "price": 30,
       "routeLimit": 2,
-      "benefits": ["Any 2 routes", "Bus only"]
+      "benefits": [
+        "Any 2 routes",
+        "Bus only"
+      ]
     },
     {
       "id": "PLAN-S-02",
@@ -14,7 +17,11 @@
       "duration": "30 Days",
       "price": 500,
       "routeLimit": 3,
-      "benefits": ["Up to 3 routes", "Bus + Metro", "5% cashback"]
+      "benefits": [
+        "Up to 3 routes",
+        "Bus + Metro",
+        "5% cashback"
+      ]
     },
     {
       "id": "PLAN-S-03",
@@ -22,7 +29,11 @@
       "duration": "90 Days",
       "price": 1350,
       "routeLimit": 5,
-      "benefits": ["Up to 5 routes", "Bus + Metro", "10% cashback"]
+      "benefits": [
+        "Up to 5 routes",
+        "Bus + Metro",
+        "10% cashback"
+      ]
     },
     {
       "id": "PLAN-S-04",
@@ -30,7 +41,11 @@
       "duration": "180 Days",
       "price": 2500,
       "routeLimit": 8,
-      "benefits": ["Up to 8 routes", "All transport", "15% cashback"]
+      "benefits": [
+        "Up to 8 routes",
+        "All transport",
+        "15% cashback"
+      ]
     },
     {
       "id": "PLAN-S-05",
@@ -38,7 +53,12 @@
       "duration": "365 Days",
       "price": 4500,
       "routeLimit": -1,
-      "benefits": ["Unlimited routes", "All transport", "20% cashback", "Priority boarding"]
+      "benefits": [
+        "Unlimited routes",
+        "All transport",
+        "20% cashback",
+        "Priority boarding"
+      ]
     }
   ],
   "employee": [
@@ -48,7 +68,10 @@
       "duration": "1 Day",
       "price": 50,
       "routeLimit": 3,
-      "benefits": ["Any 3 routes", "Bus + Metro"]
+      "benefits": [
+        "Any 3 routes",
+        "Bus + Metro"
+      ]
     },
     {
       "id": "PLAN-E-02",
@@ -56,7 +79,11 @@
       "duration": "30 Days",
       "price": 1200,
       "routeLimit": -1,
-      "benefits": ["Unlimited routes", "All transport", "Corporate discount"]
+      "benefits": [
+        "Unlimited routes",
+        "All transport",
+        "Corporate discount"
+      ]
     },
     {
       "id": "PLAN-E-03",
@@ -64,7 +91,11 @@
       "duration": "90 Days",
       "price": 3200,
       "routeLimit": -1,
-      "benefits": ["Unlimited routes", "All transport", "10% cashback"]
+      "benefits": [
+        "Unlimited routes",
+        "All transport",
+        "10% cashback"
+      ]
     },
     {
       "id": "PLAN-E-04",
@@ -72,7 +103,11 @@
       "duration": "180 Days",
       "price": 5800,
       "routeLimit": -1,
-      "benefits": ["Unlimited routes", "Priority boarding", "15% cashback"]
+      "benefits": [
+        "Unlimited routes",
+        "Priority boarding",
+        "15% cashback"
+      ]
     },
     {
       "id": "PLAN-E-05",
@@ -80,7 +115,12 @@
       "duration": "365 Days",
       "price": 10000,
       "routeLimit": -1,
-      "benefits": ["Unlimited everything", "VIP boarding", "25% cashback", "Dedicated support"]
+      "benefits": [
+        "Unlimited everything",
+        "VIP boarding",
+        "25% cashback",
+        "Dedicated support"
+      ]
     }
   ]
 }

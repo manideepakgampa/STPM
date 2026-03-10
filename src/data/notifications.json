@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "id": "NOT-mmk8nz5o-924",
+    "type": "targeted",
+    "userId": "STPM-785-6622",
+    "title": "Pass approved",
+    "message": "Monthly Route Pass is now active in your account.",
+    "date": "2026-03-10",
+    "read": false
+  },
+  {
+    "id": "NOT-mmk8nemh-898",
+    "type": "targeted",
+    "userId": "STPM-785-6622",
+    "title": "Pass application submitted",
+    "message": "Monthly Route Pass is waiting for admin approval.",
+    "date": "2026-03-10",
+    "read": false
+  },
+  {
+    "id": "NOT-1773124570839",
+    "type": "targeted",
+    "userId": "STPM-785-6622",
+    "title": "Welcome to Smart Transport",
+    "message": "Your account is ready. You can now apply for transport passes.",
+    "date": "2026-03-10",
+    "read": true
+  }
+]

@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "applicationId": "APP-mmk8nemg-217",
+    "userId": "STPM-785-6622",
+    "planId": "PLAN-S-02",
+    "type": "Monthly Route Pass",
+    "status": "approved",
+    "appliedAt": "2026-03-10",
+    "reviewedAt": "2026-03-10",
+    "reviewedBy": "STPM-100-0001"
+  }
+]

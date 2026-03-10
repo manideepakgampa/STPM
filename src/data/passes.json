@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "passId": "PASS-mmk8nz5o-218",
+    "userId": "STPM-785-6622",
+    "type": "Monthly Route Pass",
+    "planId": "PLAN-S-02",
+    "startDate": "2026-03-10",
+    "expiryDate": "2026-04-09",
+    "status": "active",
+    "routes": [
+      "Central Line Express",
+      "Airport Express",
+      "Ring Road Connector"
+    ],
+    "vehicleTypes": [
+      "Bus",
+      "Metro"
+    ],
+    "fare": 500,
+    "issuedAt": "2026-03-10",
+    "qrToken": "QR-mmk8nz5o-644",
+    "history": []
+  }
+]
